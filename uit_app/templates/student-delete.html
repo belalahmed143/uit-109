@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+            Student Delete 
+{% endblock title %}
+
+
+{% block body %}
+
+<style>
+    label{
+        font-size: 20px;
+    }
+</style>
+
+<div class="container my-5">
+    <h4 class="text-center">Student Delete</h4>
+    <div class="col-11 col-md-6 mx-auto shadow">
+        <form class="p-3" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}    
+            <button class="btn btn-primary col-12" type="submit">Are You sure ! delete ( {{ student.name }} ) this profile</button>
+        </form>
+
+    </div>
+</div>
+    
+
+{% endblock body %}
+    

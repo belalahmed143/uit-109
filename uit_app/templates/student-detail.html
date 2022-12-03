@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container my-5">
+    <h3 class="my-3">Student Detail</h3><hr>
+    <div class="row">
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="{% url 'student-update' student.pk %}">update</a>
+                <a href="{% url 'student-delete' student.pk %}">delete</a>
+                <div class="card" >
+                    <img src="{{ student.image.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">{{ student.name }}</p>
+                      <p class="card-text">{{ student.roll }}</p>
+                      <p class="card-text">{{ student.department.name }}</p>
+                    </div>
+            </div> 
+            </div> 
+
+    </div>
+  </div>
+
+  {% endblock body %}

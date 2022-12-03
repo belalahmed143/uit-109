@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+            Contact
+{% endblock title %}
+
+
+{% block body %}
+
+<style>
+    label{
+        font-size: 20px;
+    }
+</style>
+
+<div class="container my-5">
+    <h4 class="text-center">News Letter Form</h4>
+    <div class="col-11 col-md-6 mx-auto shadow">
+        <form class="p-3" action="" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label">Email address</label>
+                <input type="email" name="email" class="form-control"  placeholder="name@example.com" required>
+              </div>
+            <button class="btn btn-primary col-12" type="submit">Save</button>
+        </form>
+
+    </div>
+</div>
+    
+
+{% endblock body %}
+    

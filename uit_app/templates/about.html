@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+            About
+{% endblock title %}
+
+
+{% block body %}
+<a href="{% url 'home-page' %}">Home</a>
+    <h1 class="he">About</h1>
+
+
+    <div class="container my-5">
+        <h3 class="my-3">EEE Teacher</h3><hr>
+        <div class="row">
+
+                
+                {% for d in tf_data %}
+                <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card" >
+                                <h2>{{ d.name }}</h2>
+                                <div class="card-body">
+                                  <p class="card-text">{{ d.designation }}</p>
+                                  <p>{{ d.department.name }}</p>
+                                </div>
+                        </div> 
+                </div> 
+                {% endfor %}
+                        
+
+
+        </div>
+      </div>
+
+{% endblock body %}
+    

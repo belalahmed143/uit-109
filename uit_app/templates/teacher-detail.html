@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container my-5">
+    <h3 class="my-3">Student Detail</h3><hr>
+    <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+                <a href="{% url 'teacher-update' object.pk %}">update</a>
+                <a href="{% url 'teacher-delete' object.pk %}">delete</a>
+                <div class="card" >
+                    <p>{{ object.name }}</p>
+                    <p>{{ object.designation }}</p>
+                    <p>{{ object.department.name }}</p>
+                </div> 
+            </div> 
+
+    </div>
+  </div>
+
+  {% endblock body %}
